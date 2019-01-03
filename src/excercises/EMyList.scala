@@ -9,7 +9,7 @@ class EMyList[+T] extends MyList[Nothing] {
 
   override def isEmpty: Boolean = true
 
-  override def add[C >: Nothing](element: C): MyList[C] = new AMyList(element, new EMyList)
+  override def add[C >: Nothing](element: C): MyList[C] = AMyList(element, new EMyList)
 
   override def printElement: String = ""
 
