@@ -1,17 +1,17 @@
 package excercises
 
-object ListExercise extends App {
+object ListStringExercise extends App {
 
-  val emptyList = new EMyList
+  val emptyList = new EMyList[String]
   println(emptyList.isEmpty)
   //println(emptyList.head)
 
-  val nonEmptyList = new AMyList(5, emptyList)
+  val nonEmptyList = new AMyList[String]("first", emptyList)
   println(nonEmptyList.isEmpty)
   println(nonEmptyList.head)
 
   // 15 -> 10 -> 5
-  val aNewList = nonEmptyList.add(10).add(15)
+  val aNewList = nonEmptyList.add("second").add("third")
   println(aNewList.toString)
   println(aNewList.tail.head)
 
